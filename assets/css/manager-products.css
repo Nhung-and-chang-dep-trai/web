@@ -1,0 +1,5 @@
+.single-product .action{
+    display: flex;
+     justify-content:flex-end;
+      padding:10px;
+}
