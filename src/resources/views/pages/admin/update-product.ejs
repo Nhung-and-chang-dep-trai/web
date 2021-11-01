@@ -325,40 +325,42 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Create Product</h2>
-                        <p>This is page create product</p>
+                        <h2>Update Product</h2>
+                        <p>This is page update product</p>
                     </div>
                 </div>
             </div>
             <div class="product-details-info">
                 <div class="single-block">
-                    <h4>Create new Product</h4>
+                    <h4>Update Product</h4>
                     <div class="row mt-3">
                         <div>
-                            <form action="/products/create-product/submit" method="post" enctype="multipart/form-data">
+                            <form action="/products/update-product/submit" method="post">
+                                <div class="mb-3" style="display:none">
+                                    <input type="text" value="<%= editProduct.productID %>" name="productID" class="form-control">
+                                </div>
                                 <div class="mb-3">
-                                    <input type="text" name="productName" class="form-control" placeholder="Product Name">
+                                    <input type="text" value="<%= editProduct.productName %>" name="productName" class="form-control" placeholder="Product Name">
                                 </div>
                                 <div class="mb-3">
                                     <label class="mb-1">Choose product type:</label>
                                     <select class="form-select" name="productTypeID">
-                                        <% listProductTypes.forEach(function(productType) { %>
-                                            <option value="<%= productType.productTypeID %>"><%= productType.productTypeName %></option>
+                                        <% listProductTypes.forEach(function(productType) {
+                                            var selected = ( productType.productTypeID== editProduct.productTypeID) ? "selected" : ""; %>
+                                            <option value="<%= productType.productTypeID %>" <%= selected %>>
+                                                <%= productType.productTypeName %>
+                                            </option>
                                         <% }); %> 
                                     </select>
                                 </div>
                                 <div class="mb-3">         
-                                  <input type="text" class="form-control" name="salePrice" placeholder="Product Price" >
+                                  <input type="text" class="form-control" value="<%= editProduct.salePrice %>" name="salePrice" placeholder="Product Price" >
                                 </div>
                                 <div class="mb-3">
-                                    <textarea class="form-control" name="description" placeholder="Description" id="floatingTextarea"></textarea>
-                                </div>
-                                <div class="mb-3"> 
-                                    <label> Chọn hình ảnh sản phẩm</label>        
-                                    <input type="file" class="form-control" placeholder="Description" name="productImage">
+                                    <textarea class="form-control" name="description"  placeholder="Description" id="floatingTextarea"><%= editProduct.description %></textarea>
                                 </div>
                                 <div class="mt-2 text-center">
-                                    <button type="submit" class="btn btn-success me-3">Create</button>
+                                    <button type="submit" class="btn btn-success me-3">Update</button>
                                     <a href="/admin/manage-products" class="btn btn-primary">Back</a>
                                 </div>
                             </form>

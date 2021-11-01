@@ -1,21 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const ProductController = require('../controllers/ProductController');
-
+const uploadMulter = require('../configs/File') 
 // /* GET find by id list */
 // router.get('/:id', findOne);
 
 /* GET find list */
-router.get('/', ProductController.getAll);
+router.post('/:id/delete', ProductController.deleteByID);
 
-// /* POST */
-// router.post('/', create);
+router.post('/create-product/submit',uploadMulter.single('productImage'), ProductController.create);
 
-// /* PUT */
-// router.put('/:id', update);
+router.post('/update-product/submit', ProductController.update);
 
-// /* DELETE */
-// router.delete('/:id', deleteOne);
-
+router.get('/:id', ProductController.showProduct);
 
 module.exports = router;
