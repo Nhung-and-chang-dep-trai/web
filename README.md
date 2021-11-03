@@ -9,7 +9,7 @@ create table product(
   salePrice int NOT NULL,
   description varchar(255)
 )
---------------------------------------------------
+
 create table feedback(
   feedbackID varchar(10) PRIMARY KEY,
   custName varchar(50),
@@ -18,7 +18,7 @@ create table feedback(
   custEmail varchar(50),
   content varchar(255) NOT NULL
 )
--------------------------------------------------
+
 create table comment(
   commentID varchar(10) PRIMARY KEY,
   commentTime varchar(50) NOT NULL,
