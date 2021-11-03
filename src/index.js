@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const logger = require('morgan');
+const bodyParser = require('body-parser')
 require('dotenv').config()
 const route = require('./routes')
 // const database = require('./configs/database');
@@ -13,6 +14,8 @@ const port = process.env.PORT || 5000
 app.use(express.urlencoded({
   extended : true
 }))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //config sử dụng ejs
 app.set('view engine', 'ejs');

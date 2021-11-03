@@ -1,7 +1,7 @@
 var conn=require('./../configs/database');
 
 
-const getAll= async ()=>{
+exports.getAll= async ()=>{
     try{
         var lstProducts = await conn.query('SELECT * from product');
          return lstProducts;
@@ -9,4 +9,6 @@ const getAll= async ()=>{
         throw e;
     }
 };
-module.exports ={getAll}
+
+
+//module.exports ={getAll}

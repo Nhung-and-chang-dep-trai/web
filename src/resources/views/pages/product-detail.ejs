@@ -458,116 +458,62 @@
                 </div>
             </div>
 
-            <!-- comment -->
+            <!-- Show comment(s) -->
             <div class="row mt-5">
-                <div class="col-8">
-                    <div class="block-comment-container">
-                        <div class="comment-card-container">
-                            <div class="comment-card">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <div class="text-center">
-                                            <image src="/images/users/user_1.jpg" class="img-info-user" />
+                <% comments.forEach(function(comment) { %>
+                    <div class="col-8">
+                        <div class="block-comment-container">
+                            <div class="comment-card-container">
+                                <div class="comment-card">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="text-center">
+                                                <image src="/images/users/user_1.jpg" class="img-info-user" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="title-comment">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <p class="text-dark"><b>Pi Đẹp trai</b></p>
-                                                    <p>20-11-2000</p>
+                                        <div class="col-9">
+                                            <div class="title-comment">
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <p class="text-dark"><b><%= comment.custName %></b></p>
+                                                        <p><%= comment.commentTime %></p>
+                                                    </div>
+                                                    <div class="col-3 ">
+                                                        <div class="text-end">
+                                                            <span ><i class="far fa-comment-dots fa-2x"></i></span>
+                                                        </div>   
+                                                    </div>
                                                 </div>
-                                                <div class="col-3 ">
-                                                    <div class="text-end">
-                                                        <span ><i class="far fa-comment-dots fa-2x"></i></span>
-                                                    </div>   
-                                                </div>
+                                                
                                             </div>
                                             
+                                            <div class="description-comment text-dark mt-3"><p><b><%= comment.content %></b></p></div>
                                         </div>
-                                        
-                                        <div class="description-comment text-dark"><p>Đây là sản phẩm tốt nhất mà thế giới đã sản xuất</p></div>
-                                    </div>
-                                </div>                  
-                            </div>
-                        </div>
-                        <div class="comment-card-container">
-                            <div class="comment-card block-right">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <div class="text-center">
-                                            <image src="/images/users/user_1.jpg" class="img-info-user" />
-                                        </div>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="title-comment">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <p class="text-dark"><b>Pi Đẹp trai</b></p>
-                                                    <p>20-11-2000</p>
-                                                </div>
-                                                <div class="col-3 ">
-                                                    <div class="text-end">
-                                                        <span ><i class="far fa-comment-dots fa-2x"></i></span>
-                                                    </div>   
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                        <div class="description-comment text-dark"><p>Đây là sản phẩm tốt nhất mà thế giới đã sản xuất</p></div>
-                                    </div>
-                                </div>                  
-                            </div>
-                        </div>
-                        <div class="comment-card-container">
-                            <div class="comment-card">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <div class="text-center">
-                                            <image src="/images/users/user_1.jpg" class="img-info-user" />
-                                        </div>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="title-comment">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <p class="text-dark"><b>Pi Đẹp trai</b></p>
-                                                    <p>20-11-2000</p>
-                                                </div>
-                                                <div class="col-3 ">
-                                                    <div class="text-end">
-                                                        <span ><i class="far fa-comment-dots fa-2x"></i></span>
-                                                    </div>   
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                        <div class="description-comment text-dark"><p>Đây là sản phẩm tốt nhất mà thế giới đã sản xuất</p></div>
-                                    </div>
-                                </div>                  
+                                    </div>                  
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <% }); %>
+
+                <!-- Send comment form -->
                 <div class="col-4">
                     <div class="block-form-coment">
                         <h4>Leave A Comment</h4>
                     </div>
                     <div class="mt-3">
-                        <form>
+                        <form action="/products/product-detail/<%= id %>" method="post">
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Your Name"  aria-describedby="emailHelp">
+                                <input type="text" class="form-control" placeholder="Your Name"  aria-describedby="emailHelp" name="custName">
                               </div>
                             <div class="mb-3">         
-                              <input type="email" class="form-control" placeholder="Your Email" aria-describedby="emailHelp">
+                              <input type="email" class="form-control" placeholder="Your Email" aria-describedby="emailHelp" name="custEmail">
                             </div>
                             <div class="mb-3">         
-                                <input type="text" class="form-control" placeholder="Your Phone"  aria-describedby="emailHelp">
+                                <input type="text" class="form-control" placeholder="Your Phone"  aria-describedby="emailHelp" name="custPhone">
                               </div>
                             <div class="mb-3">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="content"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Post Comment</button>
                         </form>

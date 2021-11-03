@@ -17,5 +17,10 @@ router.get('/', ProductController.getAll);
 // /* DELETE */
 // router.delete('/:id', deleteOne);
 
+// /* GET product details and show comments */
+router.get('/product-detail/:id', ProductController.getProductDetails);
+
+// /* POST custommer comment about a specific product */
+router.post('/product-detail/:id', ProductController.sendComment);
 
 module.exports = router;
