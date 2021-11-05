@@ -1,3 +1,5 @@
+Dùng XAMPP để kết nối đến mysql
+
 #Tạo database "shop"
 
 #Tạo những bảng sau trong mysql:
