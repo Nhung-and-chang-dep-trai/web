@@ -13,10 +13,19 @@ exports.getAll = async(req,res) => {
     }
 }
 
+// Render view "feedback"
+exports.renderSendFeedback = async (req,res) => {
+    try {
+        res.render('pages/feedback');
+    } catch(e){
+        console.log(e);
+        res.json([]);
+    }
+}
+
 // Customer send Feedback
 exports.sendFeedback = async(req,res) => {
     try {
-        res.render('pages/feedback');
         var data = req.body;
         //console.log(data);
         var newFeedbackID = await FeedbackService.getMaxID();
@@ -30,7 +39,7 @@ exports.sendFeedback = async(req,res) => {
         }
         //console.log(feedback);
         let result = await FeedbackService.sendFeedback(feedback);
-        //res.redirect('/');
+        res.redirect('/feedback');
     } catch(e) {
         console.log(e);
         res.json([]);
