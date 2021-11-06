@@ -11,9 +11,9 @@ exports.getMaxID = async() =>{
 }
 
 // Get all comments of the product base on productID
-exports.getProductDetails = async(id) => {
+exports.getListCommentByID = async(id) => {
     try {
-        const result = await CommentRepo.getProductDetails(id);
+        const result = await CommentRepo.getListCommentByID(id);
         return result;
     } catch(e) {
         throw e;

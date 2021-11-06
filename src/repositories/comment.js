@@ -11,7 +11,7 @@ exports.getMaxID= async ()=>{
 };
 
 // Get all commemts of the product base on productID
-exports.getProductDetails = async (id) => {
+exports.getListCommentByID= async (id) => {
     try {
         var result = await conn.query(`select * from comment where productID='${id}';`);
         return result;

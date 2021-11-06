@@ -91,7 +91,6 @@ exports.showEdit= async(req,res)=>{
 exports.update= async(req,res)=>{
     try{
         var data=req.body;
-        console.log('data',data )
         var product={
             productID:data.productID,
             productName:data.productName,
@@ -109,36 +108,37 @@ exports.update= async(req,res)=>{
 
 //hiển thị chi tiết sản phẩm
 exports.showProduct= async(req,res)=>{
-    try{   
+    try{  
+        console.log("session",req.session);
         let count= await ProductService.isExisted(req.params.id); 
         if(!count){
             res.redirect('/404');
         }
         let product=await ProductService.getByID(req.params.id);  
-        let productDetailComment = await CommentService.getProductDetails(req.params.id);
+        let productDetailComment = await CommentService.getListCommentByID(req.params.id);
         res.render('pages/product-detail',{
             product,
             comments: productDetailComment,
-            id: req.params.id
+            id:req.params.id
         });
     }catch(e){
         console.log(e);
         res.json([]);
     }
 };
-// Get product details and show all comment(s) of this product
-exports.getProductDetails = async(req,res) => {
-    try{
+// // Get product details and show all comment(s) of this product
+// exports.getProductDetails = async(req,res) => {
+//     try{
         
-        //console.log(req.params.id);
-        res.render('pages/product-detail',{
+//         //console.log(req.params.id);
+//         res.render('pages/product-detail',{
             
-        });
-    } catch(e) {
-        console.log(e);
-        res.json([]);
-    }
-}
+//         });
+//     } catch(e) {
+//         console.log(e);
+//         res.json([]);
+//     }
+// }
 
 // Send comment about the product
 exports.sendComment = async(req,res) => {
