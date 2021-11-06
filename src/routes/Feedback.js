@@ -6,7 +6,7 @@ const FeedbackController = require('../controllers/FeedbackController');
 router.get('/', FeedbackController.getAll);
 
 // Routing Customer -  Send Feedback
-router.get('/feedback', FeedbackController.sendFeedback)
+router.get('/feedback', FeedbackController.renderSendFeedback)
 router.post('/feedback', FeedbackController.sendFeedback);
 
 module.exports = router;
