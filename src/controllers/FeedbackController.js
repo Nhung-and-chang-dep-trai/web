@@ -26,7 +26,6 @@ exports.renderSendFeedback = async (req,res) => {
 // Customer send Feedback
 exports.sendFeedback = async(req,res) => {
     try {
-        res.render('pages/feedback');
         var data = req.body;
         //console.log(data);
         var newFeedbackID = await FeedbackService.getMaxID();
