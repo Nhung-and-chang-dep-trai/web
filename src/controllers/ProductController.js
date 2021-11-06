@@ -1,5 +1,6 @@
 const ProductService=require('../services/product')
 const ProductTypeService=require('../services/productType')
+const CommentService = require('../services/Comment')
 
 exports.getAll= async(req,res)=>{
     try{
@@ -70,9 +71,22 @@ exports.showEdit= async(req,res)=>{
         });
     }catch(e){
         console.log(e);
-        res.json([]);
     }
-};
+}
+
+
+// Get all products
+// exports.getAll= async(req,res)=>{
+//     try{
+//         let products= await ProductService.getAll();
+//         //res.json(products);
+//         res.render('pages/home');
+       
+//     }catch(e){
+//         console.log(e);
+//         res.json([]);
+//     }
+// };
 
 exports.update= async(req,res)=>{
     try{
@@ -101,11 +115,56 @@ exports.showProduct= async(req,res)=>{
             res.redirect('/404');
         }
         let product=await ProductService.getByID(req.params.id);  
+        let productDetailComment = await CommentService.getProductDetails(req.params.id);
         res.render('pages/product-detail',{
-            product
+            product,
+            comments: productDetailComment,
+            id: req.params.id
         });
     }catch(e){
         console.log(e);
         res.json([]);
     }
 };
+// Get product details and show all comment(s) of this product
+exports.getProductDetails = async(req,res) => {
+    try{
+        
+        //console.log(req.params.id);
+        res.render('pages/product-detail',{
+            
+        });
+    } catch(e) {
+        console.log(e);
+        res.json([]);
+    }
+}
+
+// Send comment about the product
+exports.sendComment = async(req,res) => {
+    try {
+        var data = req.body;
+        var id = req.params.id;
+        //console.log(data);
+        //console.log(id);
+
+        var newCommentID = await CommentService.getMaxID();
+        var custComment={
+            commentID: newCommentID + 1,
+            commentTime: new Date().toString(), // convert type Date to type String
+            custName: data.custName,
+            custEmail: data.custEmail,
+            custPhone: data.custPhone,
+            content: data.content,
+            productID: id
+        }
+        console.log(custComment); // log result - for debugging
+
+        let result = await CommentService.sendComment(custComment);
+        res.redirect('/products/product-detail/' + id); 
+    } catch(e) {
+        console.log(e);
+        res.json([]);
+    }
+}
+

@@ -333,42 +333,33 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Product -->
-                    <div class="single-product text-dark">
-                        <div class="product-image text-center">
-                            <div ><span><i class="far fa-comments fa-4x"></i></span></div>
-                        </div>
-                        <div class="product-info">
-                            <p > Tên sản phẩm: <span><b>Watches</b></span></p>
-                            <p > Tên khách hàng: <span><b>Binkupi</b></span></p>
-                            <p> Email: <span><b>langtuphieubong@gmail.com</b></span></p>
-                            <p> Phone: <span><b>0123456789 </b></span></p>
-                            <div class="review">
-                                <p> Feedback: <span><b>Sản phẩm chất lượng </b></span></p>
+                <% feedbacks.forEach(function(feedback) { 
+                    if (feedback.feedbackID != null) { %>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Start Single Product -->
+                            <div class="single-product text-dark">
+                                <div class="product-image text-center">
+                                    <div ><span><i class="far fa-comments fa-4x"></i></span></div>
+                                </div>
+                                <div class="product-info">
+                                    <p > Tên sản phẩm: <span><b><%= feedback.productName %></b></span></p>
+                                    <p > Tên khách hàng: <span><b><%= feedback.custName %></b></span></p>
+                                    <p> Email: <span><b><%= feedback.custEmail %></b></span></p>
+                                    <p> Phone: <span><b><%= feedback.custPhone %></b></span></p>
+                                    <div class="review">
+                                        <p> Feedback: <span><b><%= feedback.content %></b></span></p>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- End Single Product -->
                         </div>
-                    </div>
-                    <!-- End Single Product -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Product -->
-                    <div class="single-product text-dark">
-                        <div class="product-image text-center">
-                            <div ><span><i class="far fa-comments fa-4x"></i></span></div>
-                        </div>
-                        <div class="product-info">
-                            <p > Tên sản phẩm: <span><b>Watches</b></span></p>
-                            <p > Tên khách hàng: <span><b>Binkupi</b></span></p>
-                            <p> Email: <span><b>langtuphieubong@gmail.com</b></span></p>
-                            <p> Phone: <span><b>0123456789 </b></span></p>
-                            <div class="review">
-                                <p> Feedback: <span><b>Sản phẩm chất lượng </b></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Product -->
-                </div>
+                    <% } 
+                    if (feedback.feedbackID == null) { %>
+                        <h2>No feedback recently</h2>
+                    <% }
+                }); %>
+                
+                
             </div>
                 
         </div>

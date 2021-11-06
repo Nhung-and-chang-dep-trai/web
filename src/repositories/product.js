@@ -71,3 +71,5 @@ exports.updateByID= async (product)=>{
         throw e;
     }
 };
+
+//module.exports ={getAll}

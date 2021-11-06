@@ -1,14 +1,15 @@
 const ProductRouter = require('./Product');
 const HomeRouter = require('./Home');
 const AdminRouter = require('./Admin');
+const FeedbackRouter = require('./Feedback');
 
 
 const route = (app) => {
     app.use('/products',ProductRouter);
     app.use('/admin',AdminRouter);
+    app.use('/feedback', FeedbackRouter);
     app.use('/',HomeRouter);
-
+     
 }
 
-
-module.exports = route 
+module.exports = route; 

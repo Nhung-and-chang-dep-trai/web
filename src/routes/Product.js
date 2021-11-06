@@ -13,5 +13,10 @@ router.post('/create-product/submit',uploadMulter.single('productImage'), Produc
 router.post('/update-product/submit', ProductController.update);
 
 router.get('/:id', ProductController.showProduct);
+// /* GET product details and show comments */
+router.get('/product-detail/:id', ProductController.getProductDetails);
+
+// /* POST custommer comment about a specific product */
+router.post('/product-detail/:id', ProductController.sendComment);
 
 module.exports = router;

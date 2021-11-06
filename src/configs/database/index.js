@@ -2,6 +2,7 @@
 var mysql = require('mysql2/promise');
 var pool = mysql.createPool({
     host: 'localhost',
+    port: process.env.DB_LOCALHOST ||3306,
     user: 'nhom12',
     password : '1',
     database: 'shop',
@@ -12,10 +13,12 @@ var pool = mysql.createPool({
 module.exports.query= async function (query)
 {   
     try{
+        console.log('Connect succesfully');
         var Data = await pool.query(query);
         table=Data[0];
         return table;
     }catch (err){
+        console.log('Error connecting...');
         throw err;
     }
 }
