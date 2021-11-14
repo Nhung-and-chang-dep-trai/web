@@ -19,9 +19,10 @@ exports.getAll= async(req,res)=>{
                 })
             }
         }
+        let user =req.session.user?req.session.user:null;
         res.render('pages/home',{
             products:products,
-            
+            user :user
         });
     }catch(e){
         console.log(e);

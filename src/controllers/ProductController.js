@@ -5,8 +5,11 @@ const CommentService = require('../services/Comment')
 exports.getAll= async(req,res)=>{
     try{
         let products= await ProductService.getAll();
+        let user =req.session.user?req.session.user:null;
         res.render('pages/admin/manage-products',{
-            products:products
+            products:products,
+            user
+
         });
     }catch(e){
         console.log(e);
@@ -15,9 +18,12 @@ exports.getAll= async(req,res)=>{
 };
 exports.deleteByID= async(req,res)=>{
     try{
-        let result= await ProductService.deleteByID(req.params.id);     
+        let result= await ProductService.deleteByID(req.params.id);    
+        let user =req.session.user?req.session.user:null; 
         if(result.affectedRows!==0){
-          res.redirect('/admin/manage-products');
+          res.redirect('/admin/manage-products',{
+              user
+          });
         }
     }catch(e){
         console.log(e);
@@ -28,8 +34,10 @@ exports.deleteByID= async(req,res)=>{
 exports.showCreate= async(req,res)=>{
     try{        
             let listProductTypes = await ProductTypeService.getAll(); 
+            let user =req.session.user?req.session.user:null;
             res.render('pages/admin/create-product',{
                 listProductTypes,
+                user
             });
     }catch(e){
         console.log(e);
@@ -50,6 +58,7 @@ exports.create= async(req,res)=>{
             productImage:`/images/uploads/${req.file.filename}`
         }
         let result= await ProductService.create(product);     
+        let user =req.session.user?req.session.user:null;
         res.redirect('/admin/manage-products');
     }catch(e){
         console.log(e);
@@ -65,9 +74,11 @@ exports.showEdit= async(req,res)=>{
         }
         let listProductTypes = await ProductTypeService.getAll(); 
         let editProduct=await ProductService.getByID(req.params.id); 
+        let user =req.session.user?req.session.user:null;
         res.render('pages/admin/update-product',{
             listProductTypes,
             editProduct:editProduct,
+            user
         });
     }catch(e){
         console.log(e);
@@ -98,7 +109,8 @@ exports.update= async(req,res)=>{
             salePrice:Number(data.salePrice),
             description:data.description,
         }
-        let result= await ProductService.updateByID(product);    
+        let result= await ProductService.updateByID(product); 
+  
         res.redirect('/admin/manage-products');
     }catch(e){
         console.log(e);
@@ -116,10 +128,12 @@ exports.showProduct= async(req,res)=>{
         }
         let product=await ProductService.getByID(req.params.id);  
         let productDetailComment = await CommentService.getListCommentByID(req.params.id);
+        let user =req.session.user?req.session.user:null;
         res.render('pages/product-detail',{
             product,
             comments: productDetailComment,
-            id:req.params.id
+            id:req.params.id,
+            user
         });
     }catch(e){
         console.log(e);
@@ -161,6 +175,7 @@ exports.sendComment = async(req,res) => {
         console.log(custComment); // log result - for debugging
 
         let result = await CommentService.sendComment(custComment);
+        let user =req.session.user?req.session.user:null;
         res.redirect('/products/product-detail/' + id); 
     } catch(e) {
         console.log(e);

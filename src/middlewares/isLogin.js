@@ -1,5 +1,6 @@
 exports.isLogin=(req,res,next)=>{
-    var result=req.session.isLogin;
+    req.session.user="Quốc đẹp trai";
+    var result=req.session.user;
     if(result){
         next();
     }else{

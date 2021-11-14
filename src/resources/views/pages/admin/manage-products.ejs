@@ -69,19 +69,22 @@
                             </div>
                             <!--  -->
 
-                            <ul class="user-login">
-                                <li>
+                            <ul class="user-login <%if(user==null){%><%=user%><%}else{%>hidden<%};%>">
+                                <li >
                                     <a href="./login.html">Sign In</a>
                                 </li>
                                 <li>
                                     <a href="./register.html">Register</a>
                                 </li>
-
-                                <!-- chỉ dành khi đã đăng nhâp . khi đăng nhập thành công thì xóa class hidden này đi-->
-                                <li class="hidden">
+                            </ul>
+                            <ul class="user-login <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>">
+                                <li >
+                                    <a href="#">Hello, <%=user%></a>
+                                </li>
+                                <li >
                                     <a href="./index.html">Logout</a>
                                 </li>
-                                <!-- -------------------------- -->
+                                
                             </ul>
                         </div>
                     </div>
@@ -246,47 +249,47 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="index.html" class="active" aria-label="Toggle navigation">Home</a>
+                                        <a href="/" class="active" aria-label="Toggle navigation">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                             data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
                                             aria-expanded="false" aria-label="Toggle navigation">Pages</a>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
-                                            <li class="nav-item"><a href="index.html">Home</a></li>
+                                            <li class="nav-item"><a href="/">Home</a></li>
 
 
                                             <!-- chỉ dành cho user cho quyền admin. Khi có quyền admin thì xóa class hidden này đi -->
-                                            <li class="nav-item hidden"><a href="manage-products.html">Manager Product</a></li>
-                                            <li class="nav-item hidden" ><a href="login.html">CreateProduct</a></li>
-                                            <li class="nav-item hidden" ><a href="manage-feedbacks.html">Manage Feedbacks</a></li>
-                                            <li class="nav-item hidden" ><a href="register.html">Register</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>"><a href="/admin/manage-products">Manager Products</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="/admin/create-product">CreateProduct</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="/admin/manage-feedbacks">Manage Feedbacks</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="/register">Register</a></li>
                                             <!--   ------------------------------------------   -->
 
 
-                                            <li class="nav-item"><a href="feedback.html">FeedBack</a></li>
+                                            <li class="nav-item"><a href="/feedback">FeedBack</a></li>
                                         </ul>
                                     </li>
 
-                                    <!-- chỉ dành cho user cho quyền admin. Khi có quyền admin thì xóa class hidden này đi -->
-                                    <li class="nav-item hidden">
+                                    <!-- chỉ dành cho user cho quyền admin. Khi có quyền admin thì xóa class <%if(user!=null){%><%=user%><%}else{%>hidden<%};%> này đi -->
+                                    <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                             data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent"
                                             aria-expanded="false" aria-label="Toggle navigation">Manager</a>
                                         <ul class="sub-menu collapse" id="submenu-1-4">
-                                            <li class="nav-item"><a href="manager-products.html">Manager Product</a>
+                                            <li class="nav-item"><a href="/admin/manage-products">Manager Product</a>
                                             </li>
-                                            <li class="nav-item"><a href="create-product.html">Create Product</a></li>
-                                            <li class="nav-item"><a href="manage-feedbacks.html">Manage Feedbacks</a></li>
+                                            <li class="nav-item"><a href="/admin/create-product">Create Product</a></li>
+                                            <li class="nav-item"><a href="/admin/manage-feedbacks">Manage Feedbacks</a></li>
                                         </ul>
                                     </li>
                                     <!--  -->
 
                                     <li class="nav-item">
-                                        <a href="feedback.html" aria-label="Toggle navigation">FeedBack</a>
+                                        <a href="/feedback" aria-label="Toggle navigation">FeedBack</a>
                                     </li>
                                 </ul>
-                            </div> <!-- navbar collapse -->
+                            </div> <!-- navbse -->
                         </nav>
                         <!-- End Navbar -->
                     </div>

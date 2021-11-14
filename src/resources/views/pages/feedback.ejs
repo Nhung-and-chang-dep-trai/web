@@ -68,19 +68,22 @@
                             </div>
                             <!--  -->
 
-                            <ul class="user-login">
-                                <li>
+                            <ul class="user-login <%if(user==null){%><%=user%><%}else{%>hidden<%};%>">
+                                <li >
                                     <a href="./login.html">Sign In</a>
                                 </li>
                                 <li>
                                     <a href="./register.html">Register</a>
                                 </li>
-
-                                <!-- chỉ dành khi đã đăng nhâp . khi đăng nhập thành công thì xóa class hidden này đi-->
-                                <li class="hidden">
+                            </ul>
+                            <ul class="user-login <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>">
+                                <li >
+                                    <a href="#">Hello, <%=user%></a>
+                                </li>
+                                <li >
                                     <a href="./index.html">Logout</a>
                                 </li>
-                                <!-- -------------------------- -->
+                                
                             </ul>
                         </div>
                     </div>
@@ -256,10 +259,10 @@
 
 
                                             <!-- chỉ dành cho user cho quyền admin. Khi có quyền admin thì xóa class hidden này đi -->
-                                            <li class="nav-item hidden"><a href="manage-products.html">Manager Product</a></li>
-                                            <li class="nav-item hidden" ><a href="login.html">CreateProduct</a></li>
-                                            <li class="nav-item hidden" ><a href="manage-feedbacks.html">Manage Feedbacks</a></li>
-                                            <li class="nav-item hidden" ><a href="register.html">Register</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>"><a href="manage-products.html">Manager Product</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="login.html">CreateProduct</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="manage-feedbacks.html">Manage Feedbacks</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="register.html">Register</a></li>
                                             <!--   ------------------------------------------   -->
 
 
@@ -267,13 +270,13 @@
                                         </ul>
                                     </li>
 
-                                    <!-- chỉ dành cho user cho quyền admin. Khi có quyền admin thì xóa class hidden này đi -->
-                                    <li class="nav-item hidden">
+                                    <!-- chỉ dành cho user cho quyền admin. Khi có quyền admin thì xóa class <%if(user!=null){%><%=user%><%}else{%>hidden<%};%> này đi -->
+                                    <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                             data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent"
                                             aria-expanded="false" aria-label="Toggle navigation">Manager</a>
                                         <ul class="sub-menu collapse" id="submenu-1-4">
-                                            <li class="nav-item"><a href="manager-products.html">Manager Product</a>
+                                            <li class="nav-item"><a href="manage-products.html">Manager Product</a>
                                             </li>
                                             <li class="nav-item"><a href="create-product.html">Create Product</a></li>
                                             <li class="nav-item"><a href="manage-feedbacks.html">Manage Feedbacks</a></li>

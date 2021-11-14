@@ -4,8 +4,10 @@ const FeedbackService = require('../services/Feedback');
 exports.getAll = async(req,res) => {
     try {
         let feedbacks = await FeedbackService.getAll();
+        let user =req.session.user?req.session.user:null;
         res.render('pages/admin/manage-feedback', {
-            feedbacks: feedbacks
+            feedbacks: feedbacks,
+            user:user,
         });
     } catch(e){
         console.log(e);
@@ -16,7 +18,10 @@ exports.getAll = async(req,res) => {
 // Render view "feedback"
 exports.renderSendFeedback = async (req,res) => {
     try {
-        res.render('pages/feedback');
+        let user =req.session.user?req.session.user:null;
+        res.render('pages/feedback',{
+            user:user,
+        });
     } catch(e){
         console.log(e);
         res.json([]);
@@ -39,6 +44,7 @@ exports.sendFeedback = async(req,res) => {
         }
         //console.log(feedback);
         let result = await FeedbackService.sendFeedback(feedback);
+        let user =req.session.user?req.session.user:null;
         res.redirect('/feedback');
     } catch(e) {
         console.log(e);
