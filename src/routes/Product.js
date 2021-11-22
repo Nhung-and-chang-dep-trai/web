@@ -18,6 +18,6 @@ router.get('/:id', ProductController.showProduct);
 // router.get('/product-detail/:id', ProductController.getProductDetails);
 
 // /* POST custommer comment about a specific product */
-router.post('/comment/create',isLogin, ProductController.sendComment);
+router.post('/:id',isLogin, ProductController.sendComment);
 
 module.exports = router;
