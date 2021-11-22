@@ -1,0 +1,2 @@
+Example app listening at http://localhost:\\.\pipe\88952fba-0d6e-410b-9638-c9d3f5a5789a
+[0mGET /index.js [33m404[0m 2.131 ms - 147[0m

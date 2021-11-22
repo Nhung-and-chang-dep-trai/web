@@ -1,0 +1,12 @@
+Example app listening at http://localhost:\\.\pipe\707e2471-031e-4f6d-9fb1-7bc0eb10d1d8
+Connect succesfully
+[0mGET / [32m200[0m 37.274 ms - 46184[0m
+[0mGET /index.js [33m404[0m 1.155 ms - 147[0m
+Connect succesfully
+[0mGET / [36m304[0m 8.625 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 6.353 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 5.255 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 4.328 ms - -[0m

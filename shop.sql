@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2021 at 08:36 AM
+-- Generation Time: Nov 14, 2021 at 01:29 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.28
 
@@ -89,8 +89,10 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`productID`, `productName`, `productTypeID`, `productImage`, `salePrice`, `description`) VALUES
 ('2', 'Wi-Fi Smart Camera', '1', '/images/header/cart-items/item2.jpg', 123, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.'),
-('5', 'QUỐC DT', '1', '/images/uploads/so-do-hoat-dong-may-ATM.drawio.png', 123, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.'),
-('7', '123', '3', '/images/uploads/so-do-hoat-dong-may-ATM.drawio.png', 123, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.');
+('5', 'Iphone 6', '1', '/images/products/product-4.jpg', 500, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.'),
+('7', 'speaker', '3', '/images/products/product-6.jpg', 101, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.'),
+('8', 'Xiaomi miband 5', '1', '/images/uploads/product-1.jpg', 106, 'This is my smart watch'),
+('9', 'Xiaomi miband 5', '1', '/images/uploads/product-1.jpg', 95, 'This is my smart watch');
 
 -- --------------------------------------------------------
 

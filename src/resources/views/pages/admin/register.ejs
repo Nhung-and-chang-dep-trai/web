@@ -55,7 +55,7 @@
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="top-middle">
                             <ul class="useful-links">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
@@ -72,10 +72,10 @@
 
                             <ul class="user-login <%if(user==null){%><%=user%><%}else{%>hidden<%};%>">
                                 <li >
-                                    <a href="./login.html">Sign In</a>
+                                    <a href="/login">Sign In</a>
                                 </li>
                                 <li>
-                                    <a href="./register.html">Register</a>
+                                    <a href="/register">Register</a>
                                 </li>
                             </ul>
                             <ul class="user-login <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>">
@@ -83,7 +83,7 @@
                                     <a href="#">Hello, <%=user%></a>
                                 </li>
                                 <li >
-                                    <a href="./index.html">Logout</a>
+                                    <a href="/logout">Logout</a>
                                 </li>
                                 
                             </ul>
@@ -99,7 +99,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-3 col-7">
                         <!-- Start Header Logo -->
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/">
                             <img src="/images/logo/logo.svg" alt="Logo">
                         </a>
                         <!-- End Header Logo -->
@@ -263,7 +263,7 @@
                                             <!-- chỉ dành cho user cho quyền admin. Khi có quyền admin thì xóa class hidden này đi -->
                                             <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>"><a href="/admin/manage-products">Manager Products</a></li>
                                             <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="/admin/create-product">CreateProduct</a></li>
-                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="/admin/manage-feedbacks">Manage Feedbacks</a></li>
+                                            <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="/admin/manage-feedback">Manage Feedbacks</a></li>
                                             <li class="nav-item <%if(user!=null){%><%=user%><%}else{%>hidden<%};%>" ><a href="/register">Register</a></li>
                                             <!--   ------------------------------------------   -->
 
@@ -281,7 +281,7 @@
                                             <li class="nav-item"><a href="/admin/manage-products">Manager Product</a>
                                             </li>
                                             <li class="nav-item"><a href="/admin/create-product">Create Product</a></li>
-                                            <li class="nav-item"><a href="/admin/manage-feedbacks">Manage Feedbacks</a></li>
+                                            <li class="nav-item"><a href="/admin/manage-feedback">Manage Feedbacks</a></li>
                                         </ul>
                                     </li>
                                     <!--  -->
@@ -338,22 +338,21 @@
                     <h4 class="text-center">Register user</h4>
                     <div class="row mt-3">
                         <div>
-                            <form>
+                            <form action="/register" method="post">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="UserName"  aria-describedby="emailHelp">
-                                  </div>
-                                <div class="mb-3">         
-                                <input type="text" class="form-control" placeholder="Your Phone" aria-describedby="emailHelp">
+                                    <input type="text" class="form-control" name="userid" placeholder="User Name"  aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-3">         
-                                <input type="text" class="form-control" placeholder="Your Email" aria-describedby="emailHelp">
+                                    <input type="password" class="form-control" name="userpassword" placeholder="Password" aria-describedby="emailHelp">
                                 </div>
-
                                 <div class="mb-3">         
-                                  <input type="text" class="form-control" placeholder="Password" aria-describedby="emailHelp">
+                                    <input type="text" class="form-control" name="userphone" placeholder="Your Phone" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">         
+                                    <input type="text" class="form-control" name="usermail" placeholder="Your Email" aria-describedby="emailHelp">
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Login</button>
+                                    <button type="submit" class="btn btn-primary">Sign Up</button>
                                 </div>
                             </form>
                         </div>

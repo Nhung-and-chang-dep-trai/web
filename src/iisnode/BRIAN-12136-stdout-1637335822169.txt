@@ -1,0 +1,42 @@
+Example app listening at http://localhost:\\.\pipe\0a79c5ee-645e-4296-89c5-a6f0c90a0b04
+Connect succesfully
+Error connecting...
+Error: connect ECONNREFUSED 127.0.0.1:3307
+    at PromisePool.query (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\mysql2\promise.js:341:22)
+    at Object.module.exports.query (C:\Users\Admin\Desktop\ATTT_Documents\web\src\configs\database\index.js:17:31)
+    at Object.exports.getAll (C:\Users\Admin\Desktop\ATTT_Documents\web\src\repositories\product.js:6:38)
+    at Object.exports.getAll (C:\Users\Admin\Desktop\ATTT_Documents\web\src\services\product.js:6:46)
+    at exports.getAll (C:\Users\Admin\Desktop\ATTT_Documents\web\src\controllers\HomeController.js:7:44)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\index.js:281:22 {
+  code: 'ECONNREFUSED',
+  errno: -4078,
+  sql: undefined,
+  sqlState: undefined,
+  sqlMessage: undefined
+}
+[0mGET / [36m304[0m 21.057 ms - -[0m
+Connect succesfully
+Error connecting...
+Error: connect ECONNREFUSED 127.0.0.1:3307
+    at PromisePool.query (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\mysql2\promise.js:341:22)
+    at Object.module.exports.query (C:\Users\Admin\Desktop\ATTT_Documents\web\src\configs\database\index.js:17:31)
+    at Object.exports.getAll (C:\Users\Admin\Desktop\ATTT_Documents\web\src\repositories\product.js:6:38)
+    at Object.exports.getAll (C:\Users\Admin\Desktop\ATTT_Documents\web\src\services\product.js:6:46)
+    at exports.getAll (C:\Users\Admin\Desktop\ATTT_Documents\web\src\controllers\HomeController.js:7:44)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\router\index.js:281:22 {
+  code: 'ECONNREFUSED',
+  errno: -4078,
+  sql: undefined,
+  sqlState: undefined,
+  sqlMessage: undefined
+}
+[0mGET / [32m200[0m 3.124 ms - 2[0m
+[0mGET /favicon.ico [33m404[0m 1.227 ms - 150[0m

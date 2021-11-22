@@ -1,0 +1,4 @@
+Example app listening at http://localhost:\\.\pipe\c149a3f0-54ef-40f4-9036-45e11c6ef632
+Connect succesfully
+[0mGET / [36m304[0m 37.697 ms - -[0m
+[0mGET /index.js [33m404[0m 1.908 ms - 147[0m

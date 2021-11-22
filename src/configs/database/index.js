@@ -2,7 +2,7 @@
 var mysql = require('mysql2/promise');
 var pool = mysql.createPool({
     host: 'localhost',
-    port: process.env.DB_LOCALHOST ||3306,
+    port: process.env.DB_LOCALHOST ||3307,
     user: 'nhom12',
     password : '1',
     database: 'shop',
