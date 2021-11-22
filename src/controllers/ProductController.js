@@ -176,7 +176,7 @@ exports.sendComment = async(req,res) => {
 
         let result = await CommentService.sendComment(custComment);
         let user =req.session.user?req.session.user:null;
-        res.redirect('/products/product-detail/' + id); 
+        res.redirect('/products/' + id); 
     } catch(e) {
         console.log(e);
         res.json([]);
