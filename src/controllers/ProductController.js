@@ -5,7 +5,7 @@ const CommentService = require('../services/Comment')
 exports.getAll= async(req,res)=>{
     try{
         let products= await ProductService.getAll();
-        let user =req.session.user?req.session.user:null;
+        let user =req.session.user?req.session.user:"123";
         res.render('pages/admin/manage-products',{
             products:products,
             user
@@ -21,9 +21,7 @@ exports.deleteByID= async(req,res)=>{
         let result= await ProductService.deleteByID(req.params.id);    
         let user =req.session.user?req.session.user:null; 
         if(result.affectedRows!==0){
-          res.redirect('/admin/manage-products',{
-              user
-          });
+          res.redirect('/admin/manage-products');
         }
     }catch(e){
         console.log(e);
