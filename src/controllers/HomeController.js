@@ -26,7 +26,7 @@ exports.getAll= async(req,res)=>{
         });
     }catch(e){
         console.log(e);
-        res.json([]);
+        res.redirect('back');
     }
 };
 

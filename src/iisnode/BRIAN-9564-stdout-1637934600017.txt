@@ -1,0 +1,2 @@
+Example app listening at http://localhost:\\.\pipe\a3dfa2e5-5186-430a-ab3f-e2618ec27e30
+[0mGET /blog2/wp-content/uploads/2020/07/logo.png [33m404[0m 2.763 ms - 180[0m

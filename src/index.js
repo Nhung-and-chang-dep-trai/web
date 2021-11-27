@@ -1,4 +1,7 @@
 const express = require('express')
+const app = express()
+const port = process.env.PORT || 5000
+
 const cors = require('cors')
 const logger = require('morgan');
 const bodyParser = require('body-parser')
@@ -8,13 +11,11 @@ const route = require('./routes')
 const path = require('path');
 var session = require('express-session')
 
-const app = express()
-const port = process.env.PORT || 5000
+
+
 
 // Middle ware
-app.use(express.urlencoded({
-  extended : true
-}))
+app.use(express.urlencoded({extended : true}))
 
 var sess = {
   secret: 'keyboard cat',
@@ -29,20 +30,24 @@ if (app.get('env') === 'production') {
 }
 
 app.use(session(sess))
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
+//app.use(cookieParser())
+
+
+app.use(express.static(path.join(__dirname,'public')));
+app.use(logger('dev'));
+app.use(cors())
+app.use(express.json());
 
 //config sử dụng ejs
 app.set('view engine', 'ejs');
 //set path views
 app.set('views',path.join(__dirname,'resources','views'))
 
-app.use(express.static(path.join(__dirname,'public')));
 
-app.use(logger('dev'));
-app.use(cors())
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+//app.use(express.urlencoded({ extended: true }));
+
 
 //routes
 route(app);

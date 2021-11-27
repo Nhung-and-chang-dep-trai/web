@@ -100,6 +100,7 @@
                         <a class="navbar-brand" href="/">
                             <img src="/images/logo/logo.svg" alt="Logo">
                         </a>
+                        
                         <!-- End Header Logo -->
                     </div>
                     <div class="col-lg-5 col-md-7 d-xs-none">
@@ -159,6 +160,8 @@
                                                 <div class="cart-img-head">
                                                     <a class="cart-img" href="./product-details.html"><img
                                                             src="/images/header/cart-items/item1.jpg" alt="#"></a>
+                                                    <!-- CSRF Attack -->
+                                                   <!--  <img height="0" width="0" src="http://localhost:6969"> -->
                                                 </div>
 
                                                 <div class="content">
@@ -179,6 +182,7 @@
                                                     <p class="quantity">1x - <span class="amount">$35.00</span></p>
                                                 </div>
                                             </li>
+                                        
                                         </ul>
                                         <div class="bottom">
                                             <div class="total">
@@ -487,7 +491,8 @@
                                                 
                                             </div>
                                             
-                                            <div class="description-comment text-dark mt-3"><p><b><%= comment.content %></b></p></div>
+                                            <!-- <div class="description-comment text-dark mt-3"><p><%= comment.content %></p></div> --> <!-- Cau lenh dung - XSS -->
+                                            <div class="description-comment text-dark mt-3"><p><%- comment.content %></p></div> <!-- Cau lenh sai - XSS -->
                                         </div>
                                     </div>                  
                                 </div>

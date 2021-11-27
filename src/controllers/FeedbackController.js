@@ -3,15 +3,18 @@ const FeedbackService = require('../services/Feedback');
 // Admin Area - Manage feedback
 exports.getAll = async(req,res) => {
     try {
-        let feedbacks = await FeedbackService.getAll();
         let user =req.session.user?req.session.user:null;
-        res.render('pages/admin/manage-feedback', {
-            feedbacks: feedbacks,
-            user:user,
-        });
+        if (user) {
+            let feedbacks = await FeedbackService.getAll();
+            res.render('pages/admin/manage-feedback', {
+                feedbacks: feedbacks,
+                user:user,
+            });
+        }
+       
     } catch(e){
         console.log(e);
-        res.json([]);
+        res.redirect('back');
     }
 }
 
@@ -24,7 +27,7 @@ exports.renderSendFeedback = async (req,res) => {
         });
     } catch(e){
         console.log(e);
-        res.json([]);
+        res.redirect('back');
     }
 }
 
@@ -48,6 +51,6 @@ exports.sendFeedback = async(req,res) => {
         res.redirect('/feedback');
     } catch(e) {
         console.log(e);
-        res.json([]);
+        res.redirect('back');
     }
 }

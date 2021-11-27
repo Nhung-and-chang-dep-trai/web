@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <%- include('../../partials/header'); %>
-<body>
+<body onload="onLoad('<%= user %>')">
 
     <!-- Preloader -->
     <div class="preloader">
@@ -321,6 +321,9 @@
     </header>
     <!-- End Header Area -->
 
+    <!-- <iframe style="width: 500px; height:500px" src="http://localhost:6969" target="_top" title="W3Schools Free Online Web Tutorials">
+    </iframe> -->
+
     <!-- Start Trending Product Area -->
     <section class="trending-product section" style="margin-top: 12px;">
         <div class="container">
@@ -342,9 +345,12 @@
                                     <a href="/admin/products/<%= product.productID %>/edit"class="me-1 btn p-0 text-warning">
                                         <span><i class="far fa-edit fa-2x"></i></span>
                                     </a>
-                                    <button onClick="onAlertDelete('<%= product.productID %>' , '<%= product.productName %>' )" class="btn p-0 text-danger">
+                                    <!-- <button onClick="onAlertDelete('<%= product.productID %>' , '<%= product.productName %>')" class="btn p-0 text-danger">
                                         <span><i class="fas fa-trash fa-2x"></i></span>
-                                    </button>
+                                    </button> --> <!-- Phong chong CSRF -->
+                                    <a href="/products/<%= product.productID %>/delete"class="me-1 btn p-0 text-danger">
+                                        <span><i class="fas fa-trash fa-2x"></i></span>
+                                    </a>
                                 </div>
                             </div>
                             <div class="product-image">
@@ -459,26 +465,44 @@
             </ul>
         </div>
     </section>
-    <form method="POST" id="delete-product-form"></form>
+    <form method="POST" id="delete-product-form">
+        <!-- Prevent CSRF Attack -->
+     
+    </form>
     <!-- End Shipping Info -->
     <%- include('../../partials/footer'); %>
+
     <script>
         var deleteForm=document.getElementById('delete-product-form');
         const onAlertDelete=(id,name)=>{
             const result= confirm(`Do you want to remove product ${name} `);
+            // get current cookie of delete action
+            cookie = document.cookie;
+            console.log(document.cookie.split(';')[0]);
             if(result){
                 console.log(id);
+                /* deleteForm.action='/products/'+id+"/delete/cookie"; */
                 deleteForm.action='/products/'+id+"/delete";
                 deleteForm.submit();
-                //console.log(deleteForm);
-            }
                 
-            }
-        //when diolog confirm clicks
-        // document.addEventListener("DOMContentLoaded",function(){
-        //     console.log(23);
-            
-        // })
+                //console.log(deleteForm);
+               
+            }        
+        }
+      
+        // load cookie when the page is loaded
+        const onLoad = (cookie) => {
+            document.cookie = cookie;
+            console.log(cookie)
+        }
+        
+        // set cookie = session 'user' 
+        document.addEventListener("DOMContentLoaded",function(){ 
+            var cookie = '<%- user %>';
+            document.cookie = null;
+            document.cookie = cookie;
+            console.log("web chinh: ", cookie);
+        })
     </script>
 </body>
 
