@@ -9,9 +9,7 @@ const {isLogin}= require('../middlewares/isLogin');
 
 /* GET find list */
 //router.post('/:id/delete/:cookie',isLogin,  ProductController.deleteByID);
-/* router.post('/:id/delete',isLogin,  ProductController.deleteByID); */ // Phong chong CSRF 
-router.get('/:id/delete',isLogin,  ProductController.deleteByID);
-
+router.post('/:id/delete',isLogin,  ProductController.deleteByID);
 
 /* router.post('/update-product/submit',isLogin, ProductController.update); */
 router.post('/update-product',isLogin, ProductController.update);
@@ -21,6 +19,7 @@ router.get('/:id', ProductController.showProduct);
 // router.get('/product-detail/:id', ProductController.getProductDetails);
 
 // /* POST custommer comment about a specific product */
-router.post('/:id',isLogin, ProductController.sendComment);
+router.post('/:id', ProductController.sendComment);
+
 
 module.exports = router;

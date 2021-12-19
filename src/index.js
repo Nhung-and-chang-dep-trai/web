@@ -12,8 +12,6 @@ const path = require('path');
 var session = require('express-session')
 
 
-
-
 // Middle ware
 app.use(express.urlencoded({extended : true}))
 

@@ -1,0 +1,151 @@
+Example app listening at http://localhost:\\.\pipe\956190d5-ca11-4e40-9fdd-c3d88109bb04
+Connect succesfully
+[0mGET / [36m304[0m 72.199 ms - -[0m
+[0mGET /login [32m200[0m 4.655 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 8.793 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 6.165 ms - 46254[0m
+Connect succesfully
+[0mGET /admin/create-product [32m200[0m 6.756 ms - 35004[0m
+Connect succesfully
+Connect succesfully
+[0mPOST /admin/create-product [36m302[0m 19.694 ms - 88[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 8.248 ms - 50520[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 5.584 ms - -[0m
+Connect succesfully
+[0mGET / [32m200[0m 9.476 ms - 47995[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 1.562 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 8.134 ms - 47991[0m
+[0mGET /register [32m200[0m 6.341 ms - 34185[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 1.547 ms - 162[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.398 ms - 164[0m
+Connect succesfully
+[0mPOST /register [36m302[0m 2.623 ms - 56[0m
+[0mGET /login [32m200[0m 5.462 ms - 33675[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.483 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.564 ms - 162[0m
+Connect succesfully
+Query pass:  [ { userpassword: '123' } ]
+Login service - result:  { userpassword: '123' }
+[0mPOST /login [36m302[0m 2.997 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 7.682 ms - 48019[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.280 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.376 ms - 162[0m
+Connect succesfully
+[0mGET /?searchType=1&keyword=iphone+13 [32m200[0m 8.369 ms - 39239[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true },
+  user: 'quang123'
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '4',
+  productName: 'iphone 13 promax',
+  productTypeID: '2',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1000,
+  description: '',
+  productTypeName: 'Smart Phone'
+}
+Connect succesfully
+[0mGET /products/4 [32m200[0m 19.813 ms - 42899[0m
+Connect succesfully
+{
+  commentID: 8,
+  commentTime: 'Tue Nov 30 2021 23:00:46 GMT+0700 (Indochina Time)',
+  custName: 'quang ',
+  custEmail: '',
+  custPhone: '',
+  content: 'good product',
+  productID: '4'
+}
+Connect succesfully
+[0mPOST /products/4 [36m302[0m 5.087 ms - 66[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true },
+  user: 'quang123'
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '4',
+  productName: 'iphone 13 promax',
+  productTypeID: '2',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1000,
+  description: '',
+  productTypeName: 'Smart Phone'
+}
+Connect succesfully
+[0mGET /products/4 [32m200[0m 12.679 ms - 45243[0m
+[0mGET /feedback [32m200[0m 7.673 ms - 34335[0m
+Connect succesfully
+Connect succesfully
+[0mPOST /feedback [36m302[0m 3.913 ms - 62[0m
+[0mGET /feedback [32m200[0m 4.955 ms - 34335[0m
+Connect succesfully
+[0mGET / [36m304[0m 6.704 ms - -[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 0.875 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 8.026 ms - 47991[0m
+[0mGET /login [32m200[0m 4.229 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 3.859 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 7.975 ms - 47995[0m
+Connect succesfully
+[0mGET /admin/manage-feedbacks [32m200[0m 11.912 ms - 41520[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 6.978 ms - -[0m
+Connect succesfully
+[0mGET /admin/create-product [32m200[0m 7.180 ms - 35004[0m
+Connect succesfully
+Connect succesfully
+[0mPOST /admin/create-product [36m302[0m 10.632 ms - 88[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 7.483 ms - 53183[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '8',
+  productName: 'samsung',
+  productTypeID: '2',
+  productImage: '/images/uploads/product-2.jpg',
+  salePrice: 1234,
+  description: 'samsung phone',
+  productTypeName: 'Smart Phone'
+}
+[0mGET /admin/products/8/edit [32m200[0m 12.203 ms - 35212[0m
+Connect succesfully
+ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: 'Rows matched: 1  Changed: 1  Warnings: 0',
+  serverStatus: 2,
+  warningStatus: 0,
+  changedRows: 1
+}
+[0mPOST /products/update-product [36m302[0m 3.057 ms - 88[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 9.492 ms - 53199[0m
+admin
+Connect succesfully
+[0mGET /products/6/delete [36m302[0m 11.303 ms - 88[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 9.021 ms - 50515[0m
+Connect succesfully
+[0mGET / [32m200[0m 7.331 ms - 47991[0m

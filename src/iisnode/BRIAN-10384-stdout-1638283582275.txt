@@ -1,0 +1,928 @@
+Example app listening at http://localhost:\\.\pipe\6a40e61a-5ec2-4e0a-bad5-2d586538edfc
+Connect succesfully
+[0mGET / [32m200[0m 41.822 ms - 40985[0m
+Connect succesfully
+[0mGET / [36m304[0m 9.739 ms - -[0m
+[0mGET /login [32m200[0m 4.600 ms - 33675[0m
+Connect succesfully
+[0mGET / [36m304[0m 9.603 ms - -[0m
+[0mGET /login [36m304[0m 7.380 ms - -[0m
+[0mGET /register [32m200[0m 4.553 ms - 34185[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 1.906 ms - 162[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.951 ms - 164[0m
+Connect succesfully
+[0mPOST /register [36m302[0m 7.971 ms - 56[0m
+[0mGET /login [36m304[0m 7.019 ms - -[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.580 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.620 ms - 162[0m
+Connect succesfully
+Query pass:  [ { userpassword: '123' } ]
+Login service - result:  { userpassword: '123' }
+[0mPOST /login [36m302[0m 6.389 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 9.550 ms - 41021[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.452 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.368 ms - 162[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 1.653 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 10.056 ms - 40985[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true }
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '2',
+  productName: 'iphone 14 promax',
+  productTypeID: '2',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1000,
+  description: '',
+  productTypeName: 'Smart Phone'
+}
+Connect succesfully
+[0mGET /products/2 [32m200[0m 25.613 ms - 47539[0m
+Connect succesfully
+[0mGET / [36m304[0m 11.878 ms - -[0m
+Connect succesfully
+[0mGET /?searchType=1&keyword=iphone+69 [32m200[0m 8.375 ms - 39211[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true }
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+Connect succesfully
+[0mGET /products/3 [32m200[0m 24.438 ms - 42871[0m
+Connect succesfully
+{
+  commentID: 6,
+  commentTime: 'Tue Nov 30 2021 21:51:54 GMT+0700 (Indochina Time)',
+  custName: 'quang ',
+  custEmail: '',
+  custPhone: '',
+  content: 'san pham nay rat tot',
+  productID: '3'
+}
+Connect succesfully
+[0mPOST /products/3 [36m302[0m 7.888 ms - 66[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true }
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+Connect succesfully
+[0mGET /products/3 [32m200[0m 19.785 ms - 45231[0m
+Connect succesfully
+[0mGET / [36m304[0m 10.394 ms - -[0m
+[0mGET /feedback [32m200[0m 5.981 ms - 34307[0m
+Connect succesfully
+Connect succesfully
+[0mPOST /feedback [36m302[0m 4.937 ms - 62[0m
+[0mGET /feedback [32m200[0m 5.137 ms - 34307[0m
+[0mGET /login [32m200[0m 5.009 ms - 33675[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.402 ms - 162[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.501 ms - 164[0m
+Connect succesfully
+Query pass:  []
+Login service - result:  undefined
+error-login
+[0mPOST /login [32m200[0m 3.819 ms - 78[0m
+[0mGET /favicon.ico [33m404[0m 0.494 ms - 150[0m
+Connect succesfully
+[0mGET / [36m304[0m 6.968 ms - -[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.578 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.309 ms - 162[0m
+[0mGET /login [32m200[0m 5.850 ms - 33675[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.498 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.375 ms - 162[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 3.624 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 8.960 ms - 40989[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.513 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.403 ms - 162[0m
+Connect succesfully
+[0mGET /admin/manage-feedbacks [32m200[0m 9.969 ms - 39112[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 9.778 ms - 39748[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 24.523 ms - 35215[0m
+[0mPOST /products/update-product/submit [33m404[0m 0.216 ms - 170[0m
+[0mPOST /products/update-product/submit [33m404[0m 0.238 ms - 170[0m
+[0mPOST /products/update-product/submit [33m404[0m 0.261 ms - 170[0m
+[0mPOST /products/update-product/submit [33m404[0m 0.185 ms - 170[0m
+Connect succesfully
+[0mGET / [36m304[0m 6.793 ms - -[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 0.738 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 7.044 ms - 40985[0m
+[0mGET /login [32m200[0m 3.415 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 2.706 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 8.030 ms - 40989[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 7.127 ms - -[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 18.728 ms - 35223[0m
+[0mPOST /products/update-product/productID/edit [33m404[0m 0.261 ms - 178[0m
+[0mPOST /products/update-product/productID/edit [33m404[0m 0.197 ms - 178[0m
+[0mPOST /products/update-product/productID/edit [33m404[0m 0.153 ms - 178[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [31m500[0m 12.436 ms - 2574[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 10.148 ms - 35235[0m
+[0mPOST /products/update-product/editProduct.productID/edit [33m404[0m 0.153 ms - 190[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 10.662 ms - 35215[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 0.643 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 7.404 ms - 40985[0m
+[0mGET /login [32m200[0m 3.466 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 2.185 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 6.149 ms - 40989[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 6.971 ms - -[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [36m304[0m 15.937 ms - -[0m
+[0mPOST /products/update-product/3/edit [33m404[0m 0.142 ms - 170[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 7.038 ms - -[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 13.024 ms - 35210[0m
+[0mPOST /products/update-product/3 [33m404[0m 0.165 ms - 165[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [36m304[0m 11.522 ms - -[0m
+[0mPOST /products/update-product/3 [33m404[0m 0.149 ms - 165[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [36m304[0m 11.824 ms - -[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [36m304[0m 10.632 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 8.087 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 9.864 ms - -[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 7.366 ms - -[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 14.909 ms - 35200[0m
+[0mPOST /products/3/edit [33m404[0m 0.157 ms - 155[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 10.463 ms - 35206[0m
+[0mPOST /admin/products/3/edit [33m404[0m 0.157 ms - 161[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 13.248 ms - 35216[0m
+[0mPOST /admin/products/update-product/3 [33m404[0m 0.150 ms - 171[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 8.922 ms - 35207[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [36m304[0m 13.361 ms - -[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [36m304[0m 23.738 ms - -[0m
+[0mPOST /admin/update-product/3 [33m404[0m 0.158 ms - 162[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 9.565 ms - 35221[0m
+[0mPOST /admin/products/3/edit/update-product [33m404[0m 0.148 ms - 176[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 13.311 ms - 35205[0m
+[0mPOST /admin/update-product [33m404[0m 0.160 ms - 160[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 9.243 ms - 35199[0m
+[0mPOST /update-product [33m404[0m 0.134 ms - 154[0m
+[0mPOST /update-product [33m404[0m 0.144 ms - 154[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1200,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+[0mGET /admin/products/3/edit [32m200[0m 13.920 ms - 35208[0m
+Connect succesfully
+ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: 'Rows matched: 1  Changed: 1  Warnings: 0',
+  serverStatus: 2,
+  warningStatus: 0,
+  changedRows: 1
+}
+[0mPOST /products/update-product [36m302[0m 2.937 ms - 88[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 9.094 ms - 39748[0m
+Connect succesfully
+[0mGET / [32m200[0m 6.362 ms - 40989[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 0.762 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 7.974 ms - 40985[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true }
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '2',
+  productName: 'iphone 14 promax',
+  productTypeID: '2',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1000,
+  description: '',
+  productTypeName: 'Smart Phone'
+}
+Connect succesfully
+[0mGET /products/2 [36m304[0m 16.773 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 9.856 ms - -[0m
+Connect succesfully
+[0mGET /?searchType=1&keyword=iphone+14 [32m200[0m 9.131 ms - 39211[0m
+[0mGET /register [32m200[0m 8.040 ms - 34185[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.692 ms - 162[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.463 ms - 164[0m
+Connect succesfully
+[0mPOST /register [36m302[0m 2.664 ms - 56[0m
+[0mGET /login [32m200[0m 5.555 ms - 33675[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.474 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.498 ms - 162[0m
+Connect succesfully
+Query pass:  [ { userpassword: '123' } ]
+Login service - result:  { userpassword: '123' }
+[0mPOST /login [36m302[0m 5.042 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 14.759 ms - 41021[0m
+[0mGET /css/bootstrap.min.css.map [33m404[0m 0.342 ms - 164[0m
+[0mGET /js/bootstrap.min.js.map [33m404[0m 0.476 ms - 162[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 1.016 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 13.515 ms - 40985[0m
+[0mGET /login [32m200[0m 6.128 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: '123' } ]
+Login service - result:  { userpassword: '123' }
+[0mPOST /login [36m302[0m 2.734 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 11.314 ms - 41021[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true },
+  user: 'minhquang'
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1500,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+Connect succesfully
+[0mGET /products/3 [32m200[0m 15.738 ms - 45267[0m
+Connect succesfully
+{
+  commentID: 7,
+  commentTime: 'Tue Nov 30 2021 22:18:55 GMT+0700 (Indochina Time)',
+  custName: 'brian',
+  custEmail: '',
+  custPhone: '',
+  content: 'tuyet voi',
+  productID: '3'
+}
+Connect succesfully
+[0mPOST /products/3 [36m302[0m 4.860 ms - 66[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true },
+  user: 'minhquang'
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '3',
+  productName: 'iphone 69 promax',
+  productTypeID: '3',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1500,
+  description: '',
+  productTypeName: 'Smart Thing'
+}
+Connect succesfully
+[0mGET /products/3 [32m200[0m 13.497 ms - 47604[0m
+Connect succesfully
+[0mGET / [36m304[0m 8.766 ms - -[0m
+[0mGET /feedback [32m200[0m 7.263 ms - 34343[0m
+Connect succesfully
+Connect succesfully
+[0mPOST /feedback [36m302[0m 10.476 ms - 62[0m
+[0mGET /feedback [32m200[0m 7.295 ms - 34343[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 1.050 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 10.992 ms - 40985[0m
+[0mGET /login [32m200[0m 5.083 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 6.602 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 10.781 ms - 40989[0m
+Connect succesfully
+[0mGET /admin/manage-feedbacks [32m200[0m 12.302 ms - 40336[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 8.785 ms - -[0m
+Connect succesfully
+[0mGET /admin/create-product [32m200[0m 11.966 ms - 35004[0m
+[0mPOST /admin/create-product [31m500[0m 13.570 ms - 302[0m
+[0mPOST /admin/create-product [36m302[0m 0.305 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.319 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.346 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.392 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.333 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.249 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.368 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.288 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.327 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.328 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.474 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.307 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.251 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.370 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.305 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.270 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.279 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.271 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.327 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.280 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.326 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.487 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.324 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.249 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.411 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.308 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.343 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.287 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.292 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.332 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.347 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.583 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.379 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.310 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.380 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.323 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.296 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.364 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.315 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.251 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.298 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.398 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.477 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.413 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.309 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.331 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.384 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.330 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.390 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.340 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 1.349 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.304 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.400 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.362 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.498 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.356 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.436 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.392 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.433 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.426 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.247 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.289 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.298 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.368 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.286 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.417 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.290 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.366 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.314 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.275 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.333 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.275 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.327 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.268 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.339 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.278 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.348 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.367 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 1.208 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.315 ms - 120[0m
+[0mGET /admin/manage-products [36m302[0m 0.216 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.292 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.279 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.380 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.422 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.373 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.338 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 1.125 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.347 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.361 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.432 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.408 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.407 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.296 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.337 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.287 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.392 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.382 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.365 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.398 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.241 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.378 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.329 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.285 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.346 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.301 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.419 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.350 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.367 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.288 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.370 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.292 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.285 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.417 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.306 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.283 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.366 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.558 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.311 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.422 ms - 124[0m
+[0mGET /admin/manage-feedbacks [36m302[0m 0.368 ms - 80[0m
+Connect succesfully
+[0mGET / [32m200[0m 8.107 ms - 42759[0m
+[0mGET /login [32m200[0m 2.982 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 2.118 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 7.934 ms - 42763[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 6.351 ms - 42462[0m
+Connect succesfully
+[0mGET /admin/create-product [32m200[0m 5.888 ms - 35004[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 7.260 ms - -[0m
+Connect succesfully
+[0mGET /admin/create-product [36m304[0m 5.476 ms - -[0m
+[0mPOST /admin/create-product [31m500[0m 2.596 ms - 302[0m
+[0mPOST /admin/create-product [31m500[0m 2.165 ms - 302[0m
+Connect succesfully
+[0mGET / [36m304[0m 4.949 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 4.290 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 8.160 ms - -[0m
+Connect succesfully
+[0mGET /admin/create-product [36m304[0m 5.614 ms - -[0m
+[0mPOST /admin/create-product [31m500[0m 3.676 ms - 302[0m
+[0mPOST /admin/create-product [31m500[0m 1.693 ms - 269[0m
+Connect succesfully
+[0mGET /admin/create-product [36m304[0m 4.285 ms - -[0m
+[0mPOST /admin/create-product [31m500[0m 1.430 ms - 269[0m
+Session:  undefined
+[0mGET /logout [36m302[0m 0.576 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 4.561 ms - 42759[0m
+[0mGET /login [32m200[0m 3.495 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 2.433 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 4.044 ms - 42763[0m
+Connect succesfully
+[0mGET /admin/create-product [36m304[0m 4.643 ms - -[0m
+[0mPOST /admin/create-product [36m302[0m 0.930 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.192 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.323 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.236 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.244 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.206 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.200 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.512 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.955 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.218 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.296 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.240 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.357 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.228 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.258 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.212 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.643 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.328 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.302 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.312 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.269 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.263 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.305 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.308 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.275 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.247 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.445 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.365 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.409 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.393 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.388 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.387 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.329 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.273 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.316 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.387 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.268 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.875 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.208 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.238 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.256 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.362 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.205 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.223 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.235 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.227 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.448 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.244 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.353 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.246 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.305 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.235 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.230 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.341 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.215 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.276 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.215 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.389 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.225 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.233 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.362 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.254 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.240 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.295 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.240 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.246 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.272 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.229 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.337 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.344 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.362 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.317 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.282 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.362 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.386 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.204 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.231 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.279 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.318 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 1.332 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.274 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.312 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.388 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.216 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.211 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.186 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.267 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.903 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.225 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.338 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.348 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.322 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.347 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.290 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.340 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.290 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.326 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.333 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.335 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.344 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.262 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.280 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.485 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.343 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.206 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.255 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.296 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.369 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.270 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.232 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.309 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.351 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.411 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.280 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 1.245 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.293 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.360 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.240 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.314 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.208 ms - 120[0m
+[0mGET /admin/manage-products [36m302[0m 0.249 ms - 80[0m
+Connect succesfully
+[0mGET / [32m200[0m 6.323 ms - 44506[0m
+[0mGET /login [32m200[0m 4.980 ms - 33675[0m
+Connect succesfully
+Query pass:  [ { userpassword: 'qdqshop@admin' } ]
+Login service - result:  { userpassword: 'qdqshop@admin' }
+[0mPOST /login [36m302[0m 1.836 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 5.169 ms - 44510[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 6.462 ms - 45155[0m
+Connect succesfully
+[0mGET /admin/create-product [32m200[0m 6.496 ms - 35004[0m
+[0mPOST /admin/create-product [31m500[0m 3.200 ms - 269[0m
+[0mPOST /admin/create-product [31m500[0m 1.982 ms - 265[0m
+Connect succesfully
+[0mGET /admin/create-product [36m304[0m 5.034 ms - -[0m
+[0mPOST /admin/create-product [31m500[0m 1.365 ms - 270[0m
+[0mGET /admin/manage-products [36m302[0m 1.026 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.251 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.196 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.340 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.315 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.197 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.212 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.212 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.834 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.261 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.212 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.318 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.225 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.303 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.208 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.207 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.268 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.301 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.268 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.300 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.361 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.370 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.482 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.238 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.305 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.272 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.242 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.238 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.307 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.213 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.239 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.222 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.283 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.283 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.217 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.311 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.344 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.383 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 1.036 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.248 ms - 120[0m
+[0mGET /admin/create-product [36m302[0m 0.302 ms - 80[0m
+Connect succesfully
+[0mGET / [32m200[0m 7.297 ms - 46250[0m

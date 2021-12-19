@@ -1,0 +1,30 @@
+(node:10384) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ReferenceError: C:\Users\Admin\Desktop\ATTT_Documents\web\src\resources\views\pages\admin\update-product.ejs:341
+    339|                     <div class="row mt-3">
+    340|                         <div>
+ >> 341|                             <form action="/products/update-product/<%= productID %>/edit" method="post">
+    342|                                 <div class="mb-3" style="display:none">
+    343|                                     <input type="text" value="<%= editProduct.productID %>" name="productID" class="form-control">
+    344|                                 </div>
+
+productID is not defined
+    at eval (eval at compile (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\ejs\lib\ejs.js:662:12), <anonymous>:74:26)
+    at update-product (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\ejs\lib\ejs.js:692:17)
+    at tryHandleCache (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\ejs\lib\ejs.js:272:36)
+    at View.exports.renderFile [as engine] (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\ejs\lib\ejs.js:489:10)
+    at View.render (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\view.js:135:8)
+    at tryRender (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\application.js:640:10)
+    at Function.render (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (C:\Users\Admin\Desktop\ATTT_Documents\web\node_modules\express\lib\response.js:1012:7)
+    at exports.showEdit (C:\Users\Admin\Desktop\ATTT_Documents\web\src\controllers\ProductController.js:103:17)
+    at runMicrotasks (<anonymous>)
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\637673217819795830_iphone-13-pro-max-xam-1.jpg'
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\637673217819795830_iphone-13-pro-max-xam-1.jpg'
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\637673217819795830_iphone-13-pro-max-xam-1.jpg'
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\637673217819795830_iphone-13-pro-max-xam-1.jpg'
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\product-4.jpg'
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\product-1.jpg'
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\product-1.jpg'
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\item1.jpg'
+Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Desktop\ATTT_Documents\web\src\src\public\images\uploads\background.jpg'

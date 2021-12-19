@@ -23,6 +23,33 @@ exports.getListCommentByID= async (id) => {
 // Send comment
 exports.sendComment = async (comment) => {
     try {
+    //    /*  let black_list = /[a-zA-Z0-9]*<script>[a-zA-Z0-9]*<\/script>[a-zA-Z0-9]; */ // bieu thuc sai
+    //     let black_list = /[a-zA-Z0-9]*<script>(.*)<\/script>[a-zA-Z0-9]*/; // bieu thuc dung
+    //     //console.log(comment.content);
+    //     if (black_list.test(comment.content)) {
+    //         return null;
+    //     }
+        //console.log("XSS script: ",black_list.test(comment.content))
+        let blacklist=[
+            {key:'<',replace:'&lt;'},
+            {key:'>',replace:'&gt;'},
+            {key:'"',replace:'&quot;'},
+            {key:'$',replace:'&#36;'},
+            {key:'`',replace:'&#96;'},
+            {key:'%',replace:'&#37;'},
+            {key:'&',replace:'&#38;'},
+            {key:'/',replace:'&#47;'}
+        ];
+        let lstString = comment.content.split('');
+        lstString = lstString.map(item=>{
+        let index = blacklist.findIndex(data=>data.key==item);
+        if(index!==-1){
+            return blacklist[index].replace;
+        }
+            return item;
+        })
+        //console.log(lstString.join(''));
+        comment.content = lstString.join('');
         var result = await conn.query(`INSERT INTO comment(commentID, commentTime, custName, custEmail, custPhone, content, productID) VALUES
         ('${comment.commentID}','${comment.commentTime}','${comment.custName}','${comment.custEmail}','${comment.custPhone}','${comment.content}','${comment.productID}')`);
 

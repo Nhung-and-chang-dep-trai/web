@@ -5,16 +5,15 @@ const CommentService = require('../services/Comment')
 exports.getAll= async(req,res)=>{
     try{
         let user =req.session.user?req.session.user:null;
-        if (user) {
-            let products= await ProductService.getAll();
-            res.render('pages/admin/manage-products',{
+        let csrfToken = req.session.csrfToken?req.session.csrfToken:null;
+        let products= await ProductService.getAll();
+        res.render('pages/admin/manage-products',{
+        
+            products:products,
+            user,
+            csrfToken
             
-                products:products,
-                user,
-               
-                
-            });
-        } 
+        });
         
     }catch(e){
         console.log(e);
@@ -24,17 +23,18 @@ exports.getAll= async(req,res)=>{
 };
 exports.deleteByID= async(req,res)=>{
     try{
-        let user =req.session.user?req.session.user:null; 
-        console.log(user);
-        if (user){
+        let user =req.session.user?req.session.user:null;
+        if (req.body.csrfToken == req.session.csrfToken) {
             let result= await ProductService.deleteByID(req.params.id);    
             if(result.affectedRows!==0){
                 res.redirect('/admin/manage-products');
             }
-
         } else {
-            res.redirect('/');
+            res.status(401).json({
+                message: "Invalid csrf token"
+            })
         }
+        //console.log("csrf token delete:", req.body.csrfToken);
         
     }catch(e){
         console.log(e);
@@ -45,19 +45,16 @@ exports.deleteByID= async(req,res)=>{
 
 exports.showCreate= async(req,res)=>{
     try{        
-        let user =req.session.user?req.session.user:null;
+    let user =req.session.user?req.session.user:null;
         
-        if (user) {
-            let listProductTypes = await ProductTypeService.getAll(); 
-            res.render('pages/admin/create-product',{
-                
-                listProductTypes,
-                user,
-               
-            });
-        } else {
-            res.redirect('/');
-        }
+        let listProductTypes = await ProductTypeService.getAll(); 
+        res.render('pages/admin/create-product',{
+            
+            listProductTypes,
+            user,
+            
+        });
+
     }catch(e){
         console.log(e);
         res.redirect('/');
@@ -67,21 +64,21 @@ exports.showCreate= async(req,res)=>{
 
 exports.create= async(req,res)=>{
     try{
-        let user =req.session.user?req.session.user:null;
-        if (user) {
-                var data=req.body;
-                let newProductID= await ProductService.getMaxID();  
-                var product={
-                    productID:newProductID+1,
-                    productName:data.productName,
-                    productTypeID:data.productTypeID,
-                    salePrice:Number(data.salePrice),
-                    description:data.description,
-                    productImage:`/images/uploads/${req.file.filename}`
-                }
-                let result= await ProductService.create(product);     
-                res.redirect('/admin/manage-products');
-            }
+    let user =req.session.user?req.session.user:null;
+
+        var data=req.body;
+        let newProductID= await ProductService.getMaxID();  
+        var product={
+            productID:newProductID+1,
+            productName:data.productName,
+            productTypeID:data.productTypeID,
+            salePrice:Number(data.salePrice),
+            description:data.description,
+            productImage:`/images/uploads/${req.file.filename}`
+        }
+        let result= await ProductService.create(product);     
+        res.redirect('/admin/manage-products');
+            
     } catch(e){
         console.log(e);
         res.redirect('/');
@@ -92,21 +89,21 @@ exports.create= async(req,res)=>{
 
 exports.showEdit= async(req,res)=>{
     try{   
-        let user =req.session.user?req.session.user:null;
-        if (user) {
-            let count= await ProductService.isExisted(req.params.id); 
-            if(!count){
-                res.redirect('/404');
-            }
-            let listProductTypes = await ProductTypeService.getAll(); 
-            let editProduct=await ProductService.getByID(req.params.id); 
-            res.render('pages/admin/update-product',{
-              
-                listProductTypes,
-                editProduct:editProduct,
-                user
-            });
+    let user =req.session.user?req.session.user:null;
+
+        let count= await ProductService.isExisted(req.params.id); 
+        if(!count){
+            res.redirect('/404');
         }
+        let listProductTypes = await ProductTypeService.getAll(); 
+        let editProduct=await ProductService.getByID(req.params.id); 
+        res.render('pages/admin/update-product',{
+            
+            listProductTypes,
+            editProduct:editProduct,
+            user
+        });
+        
     }catch(e){
         console.log(e);
         res.redirect('/');
@@ -131,19 +128,18 @@ exports.showEdit= async(req,res)=>{
 exports.update= async(req,res)=>{
     try{
         let user =req.session.user?req.session.user:null;
-        if (user) {
-            var data=req.body;
-            var product={
-                productID:data.productID,
-                productName:data.productName,
-                productTypeID:data.productTypeID,
-                salePrice:Number(data.salePrice),
-                description:data.description,
-            }
-            let result= await ProductService.updateByID(product); 
-      
-            res.redirect('/admin/manage-products');
+
+        var data=req.body;
+        var product={
+            productID:data.productID,
+            productName:data.productName,
+            productTypeID:data.productTypeID,
+            salePrice:Number(data.salePrice),
+            description:data.description,
         }
+        let result= await ProductService.updateByID(product); 
+    
+        res.redirect('/admin/manage-products');
        
     }catch(e){
         console.log(e);
@@ -155,7 +151,8 @@ exports.update= async(req,res)=>{
 //hiển thị chi tiết sản phẩm
 exports.showProduct= async(req,res)=>{
     try{  
-        
+    let user =req.session.user?req.session.user:null;
+
         console.log("session",req.session);
         let count= await ProductService.isExisted(req.params.id); 
         if(!count){
@@ -192,6 +189,8 @@ exports.showProduct= async(req,res)=>{
 // Send comment about the product
 exports.sendComment = async(req,res) => {
     try {
+        let user =req.session.user?req.session.user:null;
+
         var data = req.body;
         var id = req.params.id;
         //console.log(data);
@@ -207,10 +206,12 @@ exports.sendComment = async(req,res) => {
             content: data.content,
             productID: id
         }
-        console.log(custComment); // log result - for debugging
+        //console.log(custComment); // log result - for debugging
 
         let result = await CommentService.sendComment(custComment);
-        let user =req.session.user?req.session.user:null;
+        // if (result === null) {
+        //     res.render("pages/warning-page");
+        // }
         res.redirect('/products/' + id); 
     } catch(e) {
         console.log(e);

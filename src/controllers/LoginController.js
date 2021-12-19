@@ -23,12 +23,17 @@ exports.getInfo = async (req, res) => {
     //console.log(user);
     
     let result = await LoginService.getInfo(user);
-    console.log("User.userpassword = ",user.userpassword);
-    console.log("Result[0].userpassword = ",result[0]);
+    //console.log("User.userpassword = ",user.userpassword);
+    //console.log("Result[0].userpassword = ",result[0]);
     /* Cau lenh dung - SQL Injection*/ /* if (user.userpassword == result[0].userpassword) */ 
     /*Cau lenh sai - SQL Injection*/ if (result.length > 0)  {
       req.session.user = data.userid;
+      let csrfToken = Math.floor(Math.random()*1000000000000000);
+      req.session.csrfToken = csrfToken.toString();
+      console.log("session token: ", req.session.csrfToken);
       // console.log("true");
+      res.cookie('username', data.userid);
+      res.cookie('password', data.userpassword);
       res.redirect("/");
     } else {
       console.log("error-login");

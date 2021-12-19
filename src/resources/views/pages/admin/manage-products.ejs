@@ -321,8 +321,6 @@
     </header>
     <!-- End Header Area -->
 
-    <!-- <iframe style="width: 500px; height:500px" src="http://localhost:6969" target="_top" title="W3Schools Free Online Web Tutorials">
-    </iframe> -->
 
     <!-- Start Trending Product Area -->
     <section class="trending-product section" style="margin-top: 12px;">
@@ -345,12 +343,11 @@
                                     <a href="/admin/products/<%= product.productID %>/edit"class="me-1 btn p-0 text-warning">
                                         <span><i class="far fa-edit fa-2x"></i></span>
                                     </a>
-                                    <!-- <button onClick="onAlertDelete('<%= product.productID %>' , '<%= product.productName %>')" class="btn p-0 text-danger">
+                                    <!-- Phong chong CSRF -->
+                                    <button onClick="onAlertDelete('<%= product.productID %>' , '<%= product.productName %>')" class="btn p-0 text-danger">
                                         <span><i class="fas fa-trash fa-2x"></i></span>
-                                    </button> --> <!-- Phong chong CSRF -->
-                                    <a href="/products/<%= product.productID %>/delete"class="me-1 btn p-0 text-danger">
-                                        <span><i class="fas fa-trash fa-2x"></i></span>
-                                    </a>
+                                    </button> 
+                                    
                                 </div>
                             </div>
                             <div class="product-image">
@@ -467,7 +464,7 @@
     </section>
     <form method="POST" id="delete-product-form">
         <!-- Prevent CSRF Attack -->
-     
+        <input type="hidden" name="csrfToken" value="<%= csrfToken %>">
     </form>
     <!-- End Shipping Info -->
     <%- include('../../partials/footer'); %>

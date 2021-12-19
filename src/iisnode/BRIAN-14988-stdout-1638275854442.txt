@@ -1,0 +1,72 @@
+Example app listening at http://localhost:\\.\pipe\4720289d-64ef-431d-bdb9-6b0c248d2c4a
+Connect succesfully
+[0mGET / [32m200[0m 96.598 ms - 40985[0m
+[0mGET /login [32m200[0m 4.952 ms - 33671[0m
+[0mGET /register [32m200[0m 7.671 ms - 34185[0m
+[0mGET /login [36m304[0m 3.901 ms - -[0m
+Connect succesfully
+Query pass:  [ { userpassword: '1234' } ]
+Login service - result:  { userpassword: '1234' }
+[0mPOST /login [36m302[0m 11.774 ms - 46[0m
+Connect succesfully
+[0mGET / [32m200[0m 5.753 ms - 40989[0m
+Connect succesfully
+[0mGET /?searchType=1&keyword=iphone [32m200[0m 5.399 ms - 40989[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true },
+  user: 'quang'
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '2',
+  productName: 'iphone 14 promax',
+  productTypeID: '2',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1000,
+  description: '',
+  productTypeName: 'Smart Phone'
+}
+Connect succesfully
+[0mGET /products/2 [32m200[0m 24.118 ms - 47543[0m
+Connect succesfully
+[0mGET /admin/manage-products [32m200[0m 7.831 ms - 39748[0m
+Connect succesfully
+[0mGET /admin/create-product [32m200[0m 7.908 ms - 35004[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 6.905 ms - -[0m
+Connect succesfully
+Connect succesfully
+Connect succesfully
+{
+  productID: '2',
+  productName: 'iphone 14 promax',
+  productTypeID: '2',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1000,
+  description: '',
+  productTypeName: 'Smart Phone'
+}
+[0mGET /admin/products/2/edit [32m200[0m 10.367 ms - 35215[0m
+Connect succesfully
+[0mGET /admin/manage-products [36m304[0m 6.296 ms - -[0m
+Connect succesfully
+[0mGET / [36m304[0m 6.479 ms - -[0m
+session Session {
+  cookie: { path: '/', _expires: null, originalMaxAge: null, httpOnly: true },
+  user: 'quang'
+}
+Connect succesfully
+Connect succesfully
+{
+  productID: '2',
+  productName: 'iphone 14 promax',
+  productTypeID: '2',
+  productImage: '/images/uploads/637673217819795830_iphone-13-pro-max-xam-1.jpg',
+  salePrice: 1000,
+  description: '',
+  productTypeName: 'Smart Phone'
+}
+Connect succesfully
+[0mGET /products/2 [36m304[0m 7.238 ms - -[0m
+[0mGET /feedback [32m200[0m 6.970 ms - 34311[0m

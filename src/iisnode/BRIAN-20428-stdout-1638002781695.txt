@@ -1,0 +1,3 @@
+Example app listening at http://localhost:\\.\pipe\a2d45e8e-b798-4410-a957-aecd70e7b845
+Connect succesfully
+[0mGET / [32m200[0m 40.901 ms - 40985[0m

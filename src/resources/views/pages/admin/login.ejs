@@ -337,13 +337,13 @@
                     <h4 class="text-center">Login</h4>
                     <div class="row mt-3">
                         <div>
-                            <form action="/login" method="post">
+                            <form action="/login" method="post" onsubmit="return(checkUsername())">
                               
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" name="userid" placeholder="User Name"  aria-describedby="emailHelp">
+                                    <input type="text" class="form-control" id="userid" name="userid" placeholder="User Name"  aria-describedby="emailHelp">
                                   </div>
                                 <div class="mb-3">         
-                                  <input type="text" class="form-control" name="userpassword" placeholder="Password" aria-describedby="emailHelp">
+                                  <input type="password" class="form-control" name="userpassword" placeholder="Password" aria-describedby="emailHelp">
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary">Log In</button>
@@ -414,6 +414,18 @@
     </div>
     <!-- End Review Modal -->
     <%- include('../../partials/footer'); %>
+
+    <script>
+        function checkUsername() {
+            let inputUsr = document.getElementById('userid')
+            console.log("username input:", inputUsr.value)
+            let white_list = /^[a-zA-Z0-9]*$/;
+            if (!white_list.test(inputUsr.value)) {
+                alert("Username cannot contains special characters")
+                return false
+            }
+        }
+    </script>
 </body>
 
 </html>
